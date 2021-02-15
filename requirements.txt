@@ -1,0 +1,11 @@
+Tools:
+	> Python 3.
+	> chrome driver.
+	> social media accounts. 
+Libraries:
+	> configparser
+	> time
+	> os
+	> requests
+	> bs4
+	> selenium
