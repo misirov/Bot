@@ -45,7 +45,6 @@ class Bot:
 			username = input("- username: ")
 			password = input("- password: ")
 			config[site] = {"username" : username, "password" : password}
-
 			try: # Check if file already exists on the same directory, else generate a new one
 				if os.path.isfile("accounts.ini"):
 					with open("accounts.ini", "a") as f:
@@ -55,7 +54,6 @@ class Bot:
 						config.write(f)
 			except:
 				print("An error occurred while creating or writing the configuration file")
-
 			print("1) Add more? [Y/N]")
 			choice = input("> ")
 			choice.lower()
@@ -63,10 +61,10 @@ class Bot:
 				flag = False
 			else:
 				flag = True
-
+		
 		print("\nAccount added!")
 
-
+	
 	def login_account(self, domain, username = None, password = None):
 		domain = domain.lower()
 		driver = webdriver.Chrome('') # Insert PATH to chromedriver
@@ -100,10 +98,6 @@ class Bot:
 			except:
 				print("An error has occurred. Make sure username and password are correct.")
 				driver.close()
-
-
-
-
 
 		# FACEBOOK
 		elif 'facebook' in domain:
@@ -162,9 +156,8 @@ while Flag:
 			password = input("- password: ")
 			bot.login_account("instagram", username, password)
 
-		elif option == 'y':
-			
-
+		elif option == 'y': ## NOT IMPLEMENTED
+	
 	elif get == '3':
 		email = input("- email: ")
 		password = input("- password: ")
@@ -172,6 +165,7 @@ while Flag:
 
 	elif get == '4':
 		bot.add_accounts()
+		
 	elif get == 'q':
 		Flag = False
 	
